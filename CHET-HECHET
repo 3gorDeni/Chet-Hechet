@@ -1,0 +1,47 @@
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int N, i; 
+            Console.WriteLine("Количество элементов");
+            N = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Элементы исходного массива");
+            int[] arr = new int[N];
+            for (i = 0; i < N; i++)
+            {
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Массив четных");
+            int[] arr1 = new int[N];
+            int[] arr2 = new int[N];
+            int k = 0; 
+            for (i = 0; i < N; i++)
+            {
+                if (arr[i] % 2 == 0)
+                {
+                    arr1[i] = arr[i];
+                    Console.Write(arr1[i] + " ");
+                    k++;
+                }
+            }
+            Console.WriteLine("");
+            if (k == 0)
+                Console.WriteLine();
+            Console.WriteLine("Массив четных");
+            for (i = 0; i < N; i++)
+            {
+                if (arr[i] % 2 != 0)
+                {
+                    arr1[i] = arr[i]; Console.Write(arr1[i] + " ");
+                    k++;
+                }
+            }
+            if (k == 0)
+            Console.WriteLine("Таких элементов нет");
+            Console.ReadKey();
+        }
+    }
+}
